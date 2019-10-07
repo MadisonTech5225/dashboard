@@ -1,62 +1,77 @@
-.filter-checkbox ~ .alert {
+#dashboard .news > div > .commit_comment,
+#dashboard .news > div > .create,
+#dashboard .news > div > .follow,
+#dashboard .news > div > .fork,
+#dashboard .news > div > .git-branch,
+#dashboard .news > div > .gollum,
+#dashboard .news > div > .issues_closed,
+#dashboard .news > div > .issues_comment,
+#dashboard .news > div > .issues_labeled,
+#dashboard .news > div > .issues_opened,
+#dashboard .news > div > .issues_reopened,
+#dashboard .news > div > .public,
+#dashboard .news > div > .push,
+#dashboard .news > div > .release,
+#dashboard .news > div > .repo,
+#dashboard .news > div > .tag,
+#dashboard .news > div > .team_add,
+#dashboard .news > div > .member_add,
+#dashboard .news > div > .watch_started {
   display: none;
 }
 
-.filtered-stars:checked ~ .watch_started {
+#dashboard.show_starred_and_followed_by .news > div > .watch_started.by_internet,
+#dashboard.show_starred_and_followed_by .news > div > .follow.by_internet {
   display: block;
 }
 
-.filtered-wiki:checked ~ .gollum {
+#dashboard.show_forked_by .news > div > .fork.by_internet {
   display: block;
 }
 
-.filtered-forks:checked ~ .fork {
+#dashboard.show_stars_and_follows .news > div > .watch_started.by_followed_people,
+#dashboard.show_stars_and_follows .news > div > .follow.by_followed_people {
   display: block;
 }
 
-.filtered-org:checked ~ .team_add {
+#dashboard.show_forks .news > div > .fork.by_followed_people {
   display: block;
 }
 
-.filtered-comments:checked ~ .issues_comment,
-.filtered-comments:checked ~ .commit_comment {
+#dashboard.show_open_source .news > div > .repo.by_followed_people,
+#dashboard.show_open_source .news > div > .create.by_followed_people,
+#dashboard.show_open_source .news > div > .public.by_followed_people {
   display: block;
 }
 
-.filtered-repositories:checked ~ .create,
-.filtered-repositories:checked ~ .push {
+#dashboard.show_releases .news > div > .tag,
+#dashboard.show_releases .news > div > .release {
   display: block;
 }
 
-.filtered-issues:checked ~ .issues_opened,
-.filtered-issues:checked ~ .issues_closed {
+#dashboard.show_code .news > div > .gollum,
+#dashboard.show_code .news > div > .git-branch,
+#dashboard.show_code .news > div > .push {
   display: block;
 }
 
-.filter-checkbox {
-  position: absolute;
-  -webkit-appearance: none;
+#dashboard.show_conversations .news > div > .issues_comment,
+#dashboard.show_conversations .news > div > .commit_comment,
+#dashboard.show_conversations .news > div > .issues_opened,
+#dashboard.show_conversations .news > div > .issues_labeled,
+#dashboard.show_conversations .news > div > .issues_closed,
+#dashboard.show_conversations .news > div > .issues_reopened {
+  display: block;
 }
 
-.filter-checkbox:focus, .filter-checkbox:active {
-  outline: none;
+#dashboard.show_administration .news > div > .team_add,
+#dashboard.show_administration .news > div > .member_add {
+  display: block;
 }
 
-.filter-checkbox:checked + .filter-label {
-  border-color: #08c;
-}
-
-.filter-label {
-  cursor: pointer;
-  vertical-align: middle;
+.js-recent-activity-container + details {
+  float: left;
+  margin-bottom: -6px;
   margin-right: 10px;
-  margin-bottom: 20px;
-  display: inline-block;
-  border: 1px solid #e0e0e0;
-  padding: 5px 10px;
-  border-radius: 3px;
-}
-
-.filter-label:hover {
-  box-shadow: 0 0 2px 0 #5cf;
+  margin-top: -3px;
 }
